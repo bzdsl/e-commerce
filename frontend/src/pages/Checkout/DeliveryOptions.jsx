@@ -2,7 +2,7 @@ import React from "react";
 import dayjs from "dayjs";
 import { formatMoney } from "../../utils/money";
 
-const DeliveryOption = ({ deliveryOptions, cartItem }) => {
+const DeliveryOptions = ({ deliveryOptions, cartItem }) => {
   return (
     <>
       <div className="delivery-options">
@@ -38,4 +38,4 @@ const DeliveryOption = ({ deliveryOptions, cartItem }) => {
   );
 };
 
-export default DeliveryOption;
+export default DeliveryOptions;

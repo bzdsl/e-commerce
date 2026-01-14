@@ -16,7 +16,7 @@ const Product = ({ product, loadCart }) => {
     setQuantity(quantitySelected);
   };
   return (
-    <div>
+    <>
       <div key={product.id} className="product-container">
         <div className="product-image-container">
           <img className="product-image" src={`${product.image}`} />
@@ -65,7 +65,7 @@ const Product = ({ product, loadCart }) => {
           Add to Cart
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
