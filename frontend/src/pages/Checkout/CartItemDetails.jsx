@@ -1,10 +1,9 @@
 import React from "react";
 import { formatMoney } from "../../utils/money";
 
-const CartItemDetails = ({ cartItem }) => {
+const CartItemDetails = ({ cartItem, deleteCartItems }) => {
   return (
     <>
-      {" "}
       <img className="product-image" src={cartItem.product.image} />
       <div className="cart-item-details">
         <div className="product-name">{cartItem.product.name}</div>
@@ -13,11 +12,16 @@ const CartItemDetails = ({ cartItem }) => {
         </div>
         <div className="product-quantity">
           <span>
-            Quantity:{" "}
+            Quantity:
             <span className="quantity-label">{cartItem.quantity}</span>
           </span>
           <span className="update-quantity-link link-primary">Update</span>
-          <span className="delete-quantity-link link-primary">Delete</span>
+          <span
+            className="delete-quantity-link link-primary"
+            onClick={deleteCartItems}
+          >
+            Delete
+          </span>
         </div>
       </div>
     </>
